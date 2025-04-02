@@ -86,10 +86,48 @@ const deleteDonarController = async (req, res) => {
   }
 };
 
+// delete hospital
+const deleteHospitalController = async (req, res) => {
+  try {
+    await userModel.findByIdAndDelete(req.params.id);
+    return res.status(200).send({
+      success: true,
+      message: " Record Deleted successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send({
+      success: false,
+      message: "Error while deleting ",
+      error,
+    });
+  }
+}
+
+// delete org
+const deleteOrgController = async (req, res) => {
+  try {
+    await userModel.findByIdAndDelete(req.params.id);
+    return res.status(200).send({
+      success: true,
+      message: " Record Deleted successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send({
+      success: false,
+      message: "Error while deleting ",
+      error,
+    });
+  }
+}
+
 //EXPORT
 module.exports = {
+  deleteOrgController,
   getDonarsListController,
   getHospitalListController,
   getOrgListController,
   deleteDonarController,
+  deleteHospitalController
 };

@@ -11,12 +11,18 @@ const createInventoryController = async (req, res) => {
     if (!user) {
       throw new Error("User Not Found");
     }
-    // if (inventoryType === "in" && user.role !== "donar") {
-    //   throw new Error("Not a donar account");
-    // }
-    // if (inventoryType === "out" && user.role !== "hospital") {
-    //   throw new Error("Not a hospital");
-    // }
+    if (req.body.inventoryType === "in" && user.role !== "donar") {
+      return res.status(403).send({
+        success: false,
+        message: "Only donors can add blood to inventory"
+      });
+    }
+    if (req.body.inventoryType === "out" && user.role !== "hospital") {
+      return res.status(403).send({
+        success: false,
+        message: "Only hospitals can request blood from inventory"
+      });
+    }
 
     if (req.body.inventoryType == "out") {
       const requestedBloodGroup = req.body.bloodGroup;

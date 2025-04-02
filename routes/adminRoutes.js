@@ -5,6 +5,8 @@ const {
   getHospitalListController,
   getOrgListController,
   deleteDonarController,
+  deleteHospitalController,
+  deleteOrgController,
 } = require("../controllers/adminController");
 const adminMiddleware = require("../middlewares/adminMiddleware");
 
@@ -15,7 +17,7 @@ const router = express.Router();
 
 //GET || DONAR LIST
 router.get(
-  "/donar-list",
+  "/donor-list",
   authMiddelware,
   adminMiddleware,
   getDonarsListController
@@ -39,5 +41,20 @@ router.delete(
   deleteDonarController
 );
 
+// delete hospital
+router.delete(
+  "/delete-hospital/:id",
+  authMiddelware,
+  adminMiddleware,
+  deleteHospitalController
+)
+
+// delete org
+router.delete(
+  "/delete-organization/:id",
+  authMiddelware,
+  adminMiddleware,
+  deleteOrgController
+)
 //EXPORT
 module.exports = router;
