@@ -2,6 +2,8 @@
 /node_modules
 node_modules/.
 frontend-latest/node_modules
+frontend-latest/.next
+frontend-latest/out
 
 /.pnp
 .pnp.js
@@ -23,3 +25,8 @@ frontend-latest/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Next.js specific
+.next/
+out/
+.vercel
