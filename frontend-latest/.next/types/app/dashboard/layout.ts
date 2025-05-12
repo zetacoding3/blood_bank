@@ -1,4 +1,4 @@
-// File: /Users/mac/Desktop/Blood-Bank-Mern-Stack-Project/frontend-latest/app/dashboard/layout.tsx
+// File: /Users/amjadraza/Downloads/MERN_PROJECTS_2025/blood_bank/frontend-latest/app/dashboard/layout.tsx
 import * as entry from '../../../../app/dashboard/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

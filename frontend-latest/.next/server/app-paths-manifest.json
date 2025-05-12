@@ -1,9 +1,7 @@
 {
-  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
   "/(auth)/register/page": "app/(auth)/register/page.js",
-  "/dashboard/donors/page": "app/dashboard/donors/page.js",
-  "/dashboard/donors/analytics/page": "app/dashboard/donors/analytics/page.js",
-  "/dashboard/inventory/page": "app/dashboard/inventory/page.js",
-  "/dashboard/organisation/page": "app/dashboard/organisation/page.js"
+  "/dashboard/inventory/page": "app/dashboard/inventory/page.js"
 }

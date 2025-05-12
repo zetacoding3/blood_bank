@@ -1,4 +1,4 @@
-// File: /Users/mac/Desktop/Blood-Bank-Mern-Stack-Project/frontend-latest/app/page.tsx
+// File: /Users/amjadraza/Downloads/MERN_PROJECTS_2025/blood_bank/frontend-latest/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
